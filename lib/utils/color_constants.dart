@@ -14,4 +14,10 @@ class ColorConstants {
   static const Color black =  Color(0xff3c4a4f);
   static const Color grey =  Color(0xff919293);
   static const Color snackBarBackground = Color(0xff464646);
+
+  //*********Home Screen******************
+  static const kPrimaryColor = Color(0xFFFF3B1D);
+  static const kDarkBlackColor = Color(0xFF191919);
+  static const kBgColor = Color(0xFFE7E7E7);
+  static const kBodyTextColor = Color(0xFF666666);
 }

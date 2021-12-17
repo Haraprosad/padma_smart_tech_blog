@@ -618,6 +618,13 @@
             </list>
           </value>
         </entry>
+        <entry key="splash_screen_view">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/splash_screen_view-3.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="stack_trace">
           <value>
             <list>
@@ -678,6 +685,13 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="universal_io">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/universal_io-2.0.4/lib" />
             </list>
           </value>
         </entry>
@@ -816,6 +830,7 @@
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_web_socket-1.0.1/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/source_gen-1.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/splash_screen_view-3.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.10.0/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/stream_transform-2.0.0/lib" />
@@ -825,6 +840,7 @@
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/time-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/timing-1.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/universal_io-2.0.4/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/watcher-1.0.1/lib" />
       <root url="file://$PROJECT_DIR$/../../aaaa/Needed SDK/flutter/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-2.1.0/lib" />

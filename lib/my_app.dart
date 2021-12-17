@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:padma_smart_tech_blog/ui/home_screen/home_main_ui.dart';
 import 'package:padma_smart_tech_blog/utils/responsive_size/app_config.dart';
 import 'ui/splash_ui.dart';
 import 'package:get/get.dart';
@@ -12,9 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return OrientationBuilder(builder: (context, orientation) {
+        print(Get.height);
+        print(Get.width);
         AppConfig(
-          designScreenWidth: 1366,
-          designScreenHeight: 696,
+          designScreenHeight: 821,
+          designScreenWidth: 412,
         ).init(context, constraints, orientation);
         return GetMaterialApp(
           title: 'Flutter Starter',
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
           themeMode: ThemeService.theme,
           darkTheme: Themes.dark,
           theme: Themes.light,
-          home: SplashScreenUI(),
+          home: HomeMainUI(),
         );
       });
     });

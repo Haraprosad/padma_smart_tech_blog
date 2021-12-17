@@ -10,8 +10,8 @@ import 'dimension/dimensions.dart';
 /// must be called when the app is started
 class AppConfig {
   AppConfig({
-    this.designScreenWidth = 392, //pixel 4 emulator
-    this.designScreenHeight = 781, //pixel 4 emulator
+    this.designScreenWidth = 412, //pixel 4 xl emulator
+    this.designScreenHeight = 821, //pixel 4 xl emulator
     this.desktopChangePoint = 900,
     this.tabletChangePoint = 650,
     this.watchChangePoint = 300,

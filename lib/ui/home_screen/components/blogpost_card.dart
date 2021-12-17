@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:padma_smart_tech_blog/repo/api/models/dummy_blog_post.dart';
+import 'package:padma_smart_tech_blog/ui/details_screen/post_details.dart';
 import 'package:padma_smart_tech_blog/utils/color_constants.dart';
 import 'package:padma_smart_tech_blog/utils/constant_size.dart';
 import 'package:padma_smart_tech_blog/utils/responsive.dart';
+import 'package:padma_smart_tech_blog/utils/string_constants.dart';
 
 class BlogPostCard extends StatelessWidget {
   final Blog blog;
@@ -62,6 +64,16 @@ class BlogPostCard extends StatelessWidget {
                     TextButton(
                       onPressed: () {
                         //todo: go to the details page
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => PostDetailsPage(
+                              title: blog.title,
+                              image: blog.image,
+                              description: blog.description,
+                              comments: (blog.comments.length>0?blog.comments:[StringConstants.noComment]),
+                            ),
+                          ),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.only(bottom: SizeConstants.kDefaultPadding / 4),

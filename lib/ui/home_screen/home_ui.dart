@@ -23,20 +23,6 @@ class HomeUI extends StatelessWidget {
             ),
           ),
         ),
-        if (!Responsive.isMobile(context)) SizedBox(width: SizeConstants.kDefaultPadding),
-        // Sidebar
-        if (!Responsive.isMobile(context))
-          Expanded(
-            child: Column(
-              children: [
-                Search(),
-                SizedBox(height: SizeConstants.kDefaultPadding),
-                Categories(),
-                SizedBox(height: SizeConstants.kDefaultPadding),
-                RecentPosts(),
-              ],
-            ),
-          ),
       ],
     );
   }

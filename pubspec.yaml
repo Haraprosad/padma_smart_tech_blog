@@ -82,6 +82,7 @@ dependencies:
 #For customization of splash screen easily
 ################################################
   splash_screen_view: ^3.0.0
+  google_fonts: ^2.1.0
 
 dev_dependencies:
   flutter_test:

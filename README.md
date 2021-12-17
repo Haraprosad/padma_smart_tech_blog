@@ -1,8 +1,9 @@
 # Padma Smart Tech Ltd Hand on Test
 
 ##Home Screen for dummy data
-![](screenshots/dummy_home.png) [821x412]
-![](screenshots/dummy_home2.png) [821x412]
-![](screenshots/details_screen.png) [821x412]
-![](screenshots/details_screen1.png) [821x412]
+<img src="screenshots/dummy_home.png" width="400" height="790">
+<img src="screenshots/dummy_home2.png" width="400" height="790">
+<img src="screenshots/details_screen.png" width="400" height="790">
+<img src="screenshots/details_screen1.png" width="400" height="790">
+
 

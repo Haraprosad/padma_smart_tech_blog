@@ -168,6 +168,10 @@ flutter:
     - family: SIYAM
       fonts:
         - asset: assets/font/siyam/SiyamRupaliANSI.ttf
+    - family: SF-Pro-Display
+      fonts:
+        - asset: assets/font/SF-Pro-Display-Bold.ttf
+        - asset: assets/font/SF-Pro-Display-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

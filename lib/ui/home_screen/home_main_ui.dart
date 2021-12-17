@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:padma_smart_tech_blog/controller/menu_controller.dart';
+import 'package:padma_smart_tech_blog/ui/create_blog_screen/create_blog_ui.dart';
 import 'package:padma_smart_tech_blog/utils/color_constants.dart';
 import 'package:padma_smart_tech_blog/utils/constant_size.dart';
 
@@ -14,10 +15,10 @@ class HomeMainUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.yellow,
-        child: Icon(Icons.add),
+        backgroundColor: ColorConstants.clearRed,
+        child: Icon(Icons.add,color: Colors.white,),
         onPressed: (){
-          //todo
+          Get.to(CreateBlogUI());
         },
       ),
       key: _controller.scaffoldkey,

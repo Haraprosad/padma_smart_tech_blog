@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:padma_smart_tech_blog/ext/navigation_x.dart';
 import 'package:padma_smart_tech_blog/ext/widget_x.dart';
 import 'package:padma_smart_tech_blog/gen/fonts.gen.dart';
+import 'package:padma_smart_tech_blog/ui/create_blog_screen/create_blog_ui.dart';
 import 'package:padma_smart_tech_blog/ui/details_screen/comment_ui.dart';
+import 'package:padma_smart_tech_blog/ui/edit_blog_ui/edit_blog_ui.dart';
 import 'package:padma_smart_tech_blog/utils/constant_size.dart';
 class PostDetailsPage extends StatefulWidget {
   final String title;
@@ -22,6 +26,7 @@ class PostDetailsPage extends StatefulWidget {
 
 class _PostDetailsPageState extends State<PostDetailsPage> {
 
+
   TextEditingController? _controller;
  @override
   void initState() {
@@ -33,7 +38,7 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: AppBar(
+      appBar:AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         iconTheme: IconThemeData(
@@ -72,7 +77,8 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
                   ),
                   color: Colors.grey,
                   onPressed: () {
-                    //todo: do edit operation
+                    Get.to(EditBlogUI(title: widget.title,
+                    description: widget.description,image: widget.image,));
                   },
                 ),
               ),

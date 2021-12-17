@@ -13,4 +13,7 @@ class FontFamily {
 
   /// Font family: SIYAM
   static const String siyam = 'SIYAM';
+
+  /// Font family: SF-Pro-Display
+  static const String sfProDisplay = 'SF-Pro-Display';
 }

@@ -20,4 +20,8 @@ class ColorConstants {
   static const kDarkBlackColor = Color(0xFF191919);
   static const kBgColor = Color(0xFFE7E7E7);
   static const kBodyTextColor = Color(0xFF666666);
+
+  //*********Create Blog Screen***************
+  static const Color clearRed = Color(0xFFE52020);
+  static const clearBlue = Colors.blueAccent;
 }

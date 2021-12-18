@@ -24,13 +24,14 @@ Future<void> pop({bool animated = false}) async {
 }
 
 bool analysisError(e) {
-  if (e?.error is SocketException) {
-    SnackBarHelper.showError(NetworkConfig.noInternetMessage);
-    Fimber.e("Socket Exception: " + e.toString());
-    return true;
-  } else {
-    SnackBarHelper.showError(NetworkConfig.errorMessage);
-    Fimber.e(e.toString());
-    return false;
-  }
+  // if (e?.error is SocketException) {
+  //   SnackBarHelper.showError(NetworkConfig.noInternetMessage);
+  //   Fimber.e("Socket Exception: " + e.toString());
+  //   return true;
+  // } else {
+  //   SnackBarHelper.showError(NetworkConfig.errorMessage);
+  //   Fimber.e(e.toString());
+  //   return false;
+  // }
+  return false;
 }

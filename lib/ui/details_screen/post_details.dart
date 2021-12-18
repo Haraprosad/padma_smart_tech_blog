@@ -12,12 +12,10 @@ class PostDetailsPage extends StatefulWidget {
   final String title;
   final String image;
   final String description;
-  final List<String> comments;
   PostDetailsPage(
       {required this.title,
         required this.image,
         required this.description,
-        required this.comments
       });
 
   @override
@@ -26,7 +24,8 @@ class PostDetailsPage extends StatefulWidget {
 
 class _PostDetailsPageState extends State<PostDetailsPage> {
 
-
+//todo: replace dummy comments
+List<String> comments = ["This is a good thing","Well done"];
   TextEditingController? _controller;
  @override
   void initState() {
@@ -133,7 +132,7 @@ class _PostDetailsPageState extends State<PostDetailsPage> {
               ).toBoxAdapter(),
               SizedBox(height: SizeConstants.kDefaultPadding).toBoxAdapter(),
               commentBox().toBoxAdapter(),
-              commentList(widget.comments),
+              commentList(comments),
               SizedBox(height: SizeConstants.kDefaultPadding*2,).toBoxAdapter()
             ],
           ),

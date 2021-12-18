@@ -9,10 +9,12 @@ class NetworkConfig {
   static final String noInternetMessage = "no_internet".tr;
   String getBaseUrl() {
     if (MyEnvironment.isProduction) {
+      //todo: when app will go for production then the final production url
+      //todo: -will be needed.
       return "<prod_url>";
     } else {
       //if any test server belonged
-      return "<test_url>";
+      return "https://young-island-48231.herokuapp.com/api/v1/exam";
     }
   }
 
@@ -50,7 +52,7 @@ class NetworkConfig {
         }
     }
   }
-
+  //todo: for image retrievation following method will be helpful
   //this methods will complete the image url
   static String getImageUrl(String image) {
     return "<imageurl>" + image;

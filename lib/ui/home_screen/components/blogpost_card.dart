@@ -1,6 +1,8 @@
+import 'package:fimber/fimber.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:padma_smart_tech_blog/repo/api/models/data_model.dart';
 import 'package:padma_smart_tech_blog/repo/api/models/dummy_blog_post.dart';
 import 'package:padma_smart_tech_blog/ui/details_screen/post_details.dart';
 import 'package:padma_smart_tech_blog/utils/color_constants.dart';
@@ -9,21 +11,22 @@ import 'package:padma_smart_tech_blog/utils/responsive.dart';
 import 'package:padma_smart_tech_blog/utils/string_constants.dart';
 
 class BlogPostCard extends StatelessWidget {
-  final Blog blog;
+  final Data blog;
   const BlogPostCard({
     Key? key,
     required this.blog,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    Fimber.i("Enter Blogpost card");
     return Padding(
       padding: const EdgeInsets.only(bottom: SizeConstants.kDefaultPadding),
       child: Column(
         children: [
           AspectRatio(
             aspectRatio: 1.78,
-            child: Image.asset(blog.image,fit: BoxFit.fill,),
+            //todo: image properties will be implemented further
+            child: Image.asset("assets/images/0.jpg",fit: BoxFit.fill,),
           ),
           Container(
             padding: EdgeInsets.all(SizeConstants.kDefaultPadding),
@@ -68,9 +71,9 @@ class BlogPostCard extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (_) => PostDetailsPage(
                               title: blog.title,
-                              image: blog.image,
+                              //todo: image properties will be implemented further
+                              image: "assets/images/0.jpg",
                               description: blog.description,
-                              comments: (blog.comments.length>0?blog.comments:[StringConstants.noComment]),
                             ),
                           ),
                         );

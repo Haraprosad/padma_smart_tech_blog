@@ -54,11 +54,11 @@ class HomeApi {
   }
 
   //to get blog details
-  Future<Response> requestForBlogDetails() async {
+  Future<Response> requestForBlogDetails(String blogNo) async {
     _dio.options.headers["X-Requested-With"] = "XMLHttpRequest";
     _dio.options.headers["APIKEY"] = "ZopR65Dcb#h8%_hJhQ058OpcyekX5p";
     _dio.options.headers["Content-Type"] = "application/json";
-    var response = await _dio.get("/posts/2");
+    var response = await _dio.get("/posts/${blogNo}");
     return response;
   }
 

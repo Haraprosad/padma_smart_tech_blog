@@ -74,6 +74,7 @@ class BlogPostCard extends StatelessWidget {
                               //todo: image properties will be implemented further
                               image: "assets/images/0.jpg",
                               description: blog.description,
+                              id: blog.id.toString(),
                             ),
                           ),
                         );

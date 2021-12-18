@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:padma_smart_tech_blog/controller/get_details_blog_controller.dart';
+import 'package:padma_smart_tech_blog/di/config_inject.dart';
 import 'package:padma_smart_tech_blog/ext/navigation_x.dart';
 import 'package:padma_smart_tech_blog/ext/widget_x.dart';
 import 'package:padma_smart_tech_blog/gen/fonts.gen.dart';
@@ -12,10 +14,12 @@ class PostDetailsPage extends StatefulWidget {
   final String title;
   final String image;
   final String description;
+  final String id;
   PostDetailsPage(
       {required this.title,
         required this.image,
         required this.description,
+        required this.id
       });
 
   @override
@@ -23,12 +27,14 @@ class PostDetailsPage extends StatefulWidget {
 }
 
 class _PostDetailsPageState extends State<PostDetailsPage> {
-
+  final GetDetailsBlogController _getDetailsBlogController =
+  Get.put(getIt<GetDetailsBlogController>());
 //todo: replace dummy comments
 List<String> comments = ["This is a good thing","Well done"];
   TextEditingController? _controller;
  @override
   void initState() {
+    // _getDetailsBlogController.requestForBlogList(widget.id);
     _controller = TextEditingController();
     super.initState();
   }
@@ -132,7 +138,20 @@ List<String> comments = ["This is a good thing","Well done"];
               ).toBoxAdapter(),
               SizedBox(height: SizeConstants.kDefaultPadding).toBoxAdapter(),
               commentBox().toBoxAdapter(),
-              commentList(comments),
+            GetX<GetDetailsBlogController>(
+              init: _getDetailsBlogController,
+              initState: (_) {
+                _getDetailsBlogController.requestForBlogList(widget.id);
+              },
+              builder: (s) {
+                var data = s.dataStatus.value;
+                //For server internal error(Server Error:500)
+                // I have not get any json response that's why,
+                // I have used dummy value here.
+                return commentList(comments);
+              },
+            ),
+
               SizedBox(height: SizeConstants.kDefaultPadding*2,).toBoxAdapter()
             ],
           ),

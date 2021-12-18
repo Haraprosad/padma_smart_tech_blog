@@ -31,22 +31,23 @@ class CreateBlogController extends GetxController {
 
   var dataStatus = HomeModel(data: []).obs;
 
-  void requestForBlogList() async {
+  void requestForCreatingBlogList() async {
     if (await NetworkConfig.checkInternet()) {
       SnackBarHelper.showError("No internet available");
       return;
     }
 
     SnackBarHelper.showLoading(
-      "Logging...",
+      "Loading...",
     );
 
     _homePageLayer
         .createBlogPost(titleController.text.trim(), descriptionController.text.trim())
         .then((value) {
-          dataStatus = value.obs;
+      SnackBarHelper.showSuccess("Blog Created Successfully");
+      dataStatus(value);
     }).catchError((e, s) {
-      Fimber.e("Login try catch error", ex: e, stacktrace: s);
+      Fimber.e("try catch error", ex: e, stacktrace: s);
       analysisError(e);
     });
   }

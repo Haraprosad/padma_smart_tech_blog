@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:padma_smart_tech_blog/controller/create_blog_controller.dart';
+import 'package:padma_smart_tech_blog/di/config_inject.dart';
 import 'package:padma_smart_tech_blog/ext/num_x.dart';
 import 'package:padma_smart_tech_blog/gen/fonts.gen.dart';
 import 'package:padma_smart_tech_blog/utils/color_constants.dart';
@@ -16,6 +18,9 @@ class CreateBlogUI extends StatefulWidget {
 }
 
 class _CreateBlogUIState extends State<CreateBlogUI> {
+
+  final CreateBlogController _createBlogController =
+  Get.put(getIt<CreateBlogController>());
   var globalKey = GlobalKey<ScaffoldState>;
   var stdPxW = 20.w;
   var stdPxH = 16.h;
@@ -90,6 +95,7 @@ class _CreateBlogUIState extends State<CreateBlogUI> {
                   ),
                   child: TextFormField(
                     keyboardType: TextInputType.multiline,
+                    controller: _createBlogController.titleController,
                     maxLines: null,
                     onChanged: (value) {
                       //todo
@@ -124,6 +130,7 @@ class _CreateBlogUIState extends State<CreateBlogUI> {
                   child: TextFormField(
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
+                    controller: _createBlogController.descriptionController,
                     onChanged: (value) {
                       //todo
                     },
@@ -155,7 +162,9 @@ class _CreateBlogUIState extends State<CreateBlogUI> {
                     child: RaisedButton(
                       color: ColorConstants.clearRed,
                       onPressed: () {
-                        //todo
+                        _createBlogController.requestForCreatingBlogList(
+
+                        );
                       },
                       child: Text(
                         "Save Your Post",

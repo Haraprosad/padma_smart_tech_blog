@@ -25,7 +25,7 @@ class HomePageLayer {
     var response = await _homeApi.createBlogPost(title, description);
 
     //return compute(parseApiResponse, response.data.toString());
-    return HomeModel.fromJson(response.data);
+    return HomeModel(data: response.data);
   }
   //Request for getting blog details
   Future<HomeModel> requestForBlogDetails() async {

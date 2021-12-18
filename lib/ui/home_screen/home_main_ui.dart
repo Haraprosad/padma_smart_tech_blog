@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:padma_smart_tech_blog/controller/create_blog_controller.dart';
 import 'package:padma_smart_tech_blog/controller/menu_controller.dart';
+import 'package:padma_smart_tech_blog/di/config_inject.dart';
 import 'package:padma_smart_tech_blog/ui/create_blog_screen/create_blog_ui.dart';
 import 'package:padma_smart_tech_blog/utils/color_constants.dart';
 import 'package:padma_smart_tech_blog/utils/constant_size.dart';

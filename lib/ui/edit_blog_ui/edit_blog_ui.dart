@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:padma_smart_tech_blog/ext/num_x.dart';
 import 'package:padma_smart_tech_blog/gen/fonts.gen.dart';
 import 'package:padma_smart_tech_blog/utils/color_constants.dart';

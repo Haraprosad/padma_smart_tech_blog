@@ -1,12 +1,11 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:injectable/injectable.dart';
-import 'package:get/get.dart';
 import '../../my_env.dart';
 
 @lazySingleton
 class NetworkConfig {
-  static final String errorMessage = "unexpected_error".tr;
-  static final String noInternetMessage = "no_internet".tr;
+  static final String errorMessage = "unexpected_error";
+  static final String noInternetMessage = "no_internet";
   String getBaseUrl() {
     if (MyEnvironment.isProduction) {
       //todo: when app will go for production then the final production url
@@ -23,7 +22,7 @@ class NetworkConfig {
     return result == ConnectivityResult.none;
   }
 
-  // chnage with app
+  // change with app
   // just as an example
   static ApiResponseType getApiStatus(int statusCode, String message) {
     switch (statusCode) {

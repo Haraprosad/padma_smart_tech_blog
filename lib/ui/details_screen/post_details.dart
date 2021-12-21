@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:padma_smart_tech_blog/controller/get_details_blog_controller.dart';
 import 'package:padma_smart_tech_blog/di/config_inject.dart';
-import 'package:padma_smart_tech_blog/ext/navigation_x.dart';
 import 'package:padma_smart_tech_blog/ext/widget_x.dart';
 import 'package:padma_smart_tech_blog/gen/fonts.gen.dart';
 import 'package:padma_smart_tech_blog/ui/create_blog_screen/create_blog_ui.dart';

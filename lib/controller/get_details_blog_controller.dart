@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:injectable/injectable.dart';
 import 'package:padma_smart_tech_blog/repo/api/layers/home_page_layer.dart';
-import 'package:padma_smart_tech_blog/repo/api/models/api_response.dart';
 import 'package:padma_smart_tech_blog/repo/api/models/data_model.dart';
 import 'package:padma_smart_tech_blog/repo/api/models/home_model.dart';
 import 'package:padma_smart_tech_blog/repo/api/network_config.dart';
@@ -42,7 +41,6 @@ class GetDetailsBlogController extends GetxController {
       dataStatus(value);
     }).catchError((e, s) {
       Fimber.e("Login try catch error", ex: e, stacktrace: s);
-      analysisError(e);
     });
   }
 }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:padma_smart_tech_blog/controller/menu_controller.dart';
-import 'package:padma_smart_tech_blog/ui/home_screen/components/socal.dart';
 import 'package:padma_smart_tech_blog/utils/color_constants.dart';
 import 'package:padma_smart_tech_blog/utils/constant_size.dart';
 import 'package:padma_smart_tech_blog/utils/responsive.dart';
@@ -28,7 +26,6 @@ class Header extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      if (!Responsive.isDesktop(context))
                         IconButton(
                           icon: Icon(
                             Icons.menu,
@@ -40,8 +37,6 @@ class Header extends StatelessWidget {
                         ),
                       //SvgPicture.asset("assets/icons/logo.svg"),
                       Image.asset("assets/img/splash_icon.png"),
-                      Spacer(),
-                      if (Responsive.isDesktop(context)) WebMenu(),
                       Spacer(),
                       // Socal
                       ElevatedButton(

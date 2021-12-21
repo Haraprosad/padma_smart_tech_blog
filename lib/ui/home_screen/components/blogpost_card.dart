@@ -48,7 +48,7 @@ class BlogPostCard extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontSize: Responsive.isDesktop(context) ? 32 : 24,
+                      fontSize: 24,
                       fontFamily: "Raleway",
                       color: ColorConstants.kDarkBlackColor,
                       height: 1.3,
